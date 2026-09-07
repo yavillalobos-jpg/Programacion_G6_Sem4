@@ -9,4 +9,7 @@ def askhours():
 calcular_pago(40, 120)
 
 # La siguiente instrucción produciría NameError:
-# print(pago)
+#print(pago)
+""" 
+#Este (pago) da error porque la variable pago está definida dentro de la función calcular_pago y no es accesible fuera de ella.
+"""
