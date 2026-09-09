@@ -1,5 +1,3 @@
-#El siguiente ejercicio consiste en pedir leer n de nota decir si es aprendizaje incial, fundamental, sastifactorio y avanzado, mostrar todas las notas.
-#El siguiente ejercicio consiste en pedir leer n de nota decir si es aprendizaje incial, fundamental, sastifactorio y avanzado, mostrar todas las notas.
 def clasificar_nota(note):
     if 1 <= note <= 59:
         return "Aprendizaje inicial"
@@ -10,37 +8,19 @@ def clasificar_nota(note):
     elif 90 <= note <= 100:
         return "Aprendizaje avanzado"
     else:
-        return "note inválida"
-
-# Función principal
-def programa():
-    notas = []
-    n = int(input("¿Cuántas notas desea ingresar? "))
-
-    for i in range(n):
-        note = float(input(f"Ingrese la nota {i + 1} (1 - 100): "))
-        notas.append(note)
-
-    print("\nListado de notas:")
-    for note in notas:
-        print(f"Nota: {note} - {clasificar_nota(note)}")
+        return "Nota inválida"
 
 
-programa()
+def program():
+    notes = []
+    cantidad = int(input("¿Cuántas notas desea ingresar? "))
 
+    for i in range(cantidad):
+        note = float(input(f"Ingrese la nota {i + 1} (1-100): "))
+        notes.append(note)
 
-# Función principal
-def programa():
-    notas = []
-    n = int(input("¿Cuántas notas desea ingresar? "))
+    print("\nTodas las notas:")
+    for note in notes:
+        print(f"{note} - {clasificar_nota(note)}")
 
-    for i in range(n):
-        note = float(input(f"Ingrese la nota {i + 1} (1 - 100): "))
-        notas.append(note)
-
-    print("\nListado de notas:")
-    for note in notas:
-        print(f"Nota: {note} - {clasificar_nota(note)}")
-
-
-programa()
+program()
